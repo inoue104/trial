@@ -1,2 +1,2 @@
 # trial
-trial for me
+This repository is just trial for me.
