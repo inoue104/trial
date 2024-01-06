@@ -1,0 +1,228 @@
+Delivered-To: inoue405@gmail.com
+Received: by 2002:a17:906:7d4e:b0:a27:7687:4a97 with SMTP id l14csp4578238ejp;
+        Fri, 5 Jan 2024 05:04:27 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IGTAd7DZANG+JDuPOfjPsi0r7c0p7PPxPzWBOnWqzttXx7UOdG1QsCci+TBBbBbfS1HeeYQ
+X-Received: by 2002:a05:622a:1744:b0:429:7d91:5339 with SMTP id l4-20020a05622a174400b004297d915339mr27690qtk.79.1704459867539;
+        Fri, 05 Jan 2024 05:04:27 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1704459867; cv=none;
+        d=google.com; s=arc-20160816;
+        b=zm3rSDbiqczs5Uio3u8zy676YzNK6vVVQBL7wAWdkixeYwk6V6XlLcbEEAfbV0LIE2
+         kdvLPxU87Tn6UxrJ8/EAqonfECr3p4Hen7ZS6y5jIq0PRdAVGOzUrDllxd9jhvWsN1yc
+         85wMS+hy39972Nqc7C6FA4Jjekluxxk6GgNwOB31D/MBOAcBg9AB4gRAER0L8nhVQdum
+         2xHm0GaBHVWFqgSoigTDBHDESURxhTjHMNYJFKYRHM6BoBGxsButLkeXSNR/SWOf61GD
+         /XKU/4ZprQZnDvR3huwgr7hRXe68gtXhdbavfI42q0XBpi/5u3oPcFTn/vKOpYpkNBqW
+         XD8g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=references:in-reply-to:mime-version:message-id:date:subject:from:to
+         :dkim-signature;
+        bh=2GLxp2hZnWT6cneS9RRN2ZMRDjkne69API0kn86FxZs=;
+        fh=z8Jm+bKcusBXoJ9A8DXjb4isQ2jIo+KRIXsqAFCw3D4=;
+        b=KO2yGW+E4GWcXtg5vv9Pa3S4L0JDIGurf569aiPt0gzF9I0NoJw8c0AZFucIVPFYz5
+         sOkaYgaMqChj+AI72nf7ifnkGvf2PGMsREZiAw2AW3tTJLFurX+oJm3Aky5UBUyvqcxe
+         FZx+fRV6cx6W1++sk8aQXI0lJYr1YiSKzIIP+YObzr4mA4rDHrHNqnkv/ieAkTCA6lcr
+         Xyx6Hy5WVeU5+5slahMGw12pG+Ei1rFEDZuXsQZaUZJUH1Wz8ZeKMZBr7Uz9T15RRh1d
+         uWNek3xGhLQ2QZqvUkuhOW9tIDgl+X+RehOwn+KzYroxOAKkAFPWN07CcHBsvqz2mKre
+         DH1A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=temperror (no key for signature) header.i=@galapagos-island.net header.s=sig1 header.b=KfLPshql;
+       spf=pass (google.com: domain of ninoue@galapagos-island.net designates 17.57.156.19 as permitted sender) smtp.mailfrom=ninoue@galapagos-island.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=galapagos-island.net
+Return-Path: <ninoue@galapagos-island.net>
+Received: from ci74p00im-qukt09090102.me.com (ci74p00im-qukt09090102.me.com. [17.57.156.19])
+        by mx.google.com with ESMTPS id m14-20020a05622a118e00b00423f3ce69a4si1784515qtk.153.2024.01.05.05.04.27
+        for <inoue405@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 05 Jan 2024 05:04:27 -0800 (PST)
+Received-SPF: pass (google.com: domain of ninoue@galapagos-island.net designates 17.57.156.19 as permitted sender) client-ip=17.57.156.19;
+Authentication-Results: mx.google.com;
+       dkim=temperror (no key for signature) header.i=@galapagos-island.net header.s=sig1 header.b=KfLPshql;
+       spf=pass (google.com: domain of ninoue@galapagos-island.net designates 17.57.156.19 as permitted sender) smtp.mailfrom=ninoue@galapagos-island.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=galapagos-island.net
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=galapagos-island.net; s=sig1; t=1704459867;
+	bh=2GLxp2hZnWT6cneS9RRN2ZMRDjkne69API0kn86FxZs=;
+	h=To:From:Subject:Date:Message-id:Content-Type:MIME-Version;
+	b=KfLPshqlPOKQA0EvQi/Q5Z0ck71Lq9C/xQTzsaQFCF95UTqF8CVh+1L5D/fgiFTDv
+	 lzsnBwfEYu0xoI6jZRJJFSKgGbTjOrmTH5ndsSiujNUlfCJdFcCqkcmaWb5iS7JLo1
+	 AxkK6v2CqBVlCEsjYoqwMp0W7J3eVbVfsykb+KNVuvDLU3IWGYkuWpkS/I6OFnS2H/
+	 q0qNNjQIc6+cNGrYLwGEq6oOYb2oBmH/aZhkw/oAETfQ7jFArCUfyk6ozbBydsfGhJ
+	 2QAQAOsKqZiViovetYOV3x4b1n8QbR7BPBquMpZ6LQaoiD88HJM2gG3cpLRnkE6BzR
+	 XApK5MLf2cQrA==
+Received: from ci74p00im-qukt09090102.me.com (unknown [17.57.156.19])
+	by ci74p00im-qukt09090102.me.com (Postfix) with ESMTPS id 2FFA63C00261
+	for <inoue405@gmail.com>; Fri,  5 Jan 2024 13:04:26 +0000 (UTC)
+Received: from p00-mailws2-78d47664b4-m2snn (ci77p00im.dlb-asmtpoutvip.me.com [10.168.160.28])
+	by ci74p00im-qukt09090102.me.com (Postfix) with ESMTPSA id C97373C00264
+	for <inoue405@gmail.com>; Fri,  5 Jan 2024 13:04:25 +0000 (UTC)
+To: =?utf-8?B?5LqV5LiK55u05Lmf?= <inoue405@gmail.com>
+From: Naoya Inoue <ninoue@galapagos-island.net>
+Subject: =?utf-8?B?UmU6IGljbG91ZOOBruWuuemHj+OCkuevgOe0hOOBl+OBnw==?=
+ =?utf-8?B?44GE44CC?=
+Date: Fri, 5 Jan 2024 13:04:25 +0000 (UTC)
+X-Client-IP: 10.9.0.253
+X-Mailer: iCloud MailClientcurrent MailServer2404B143.10000-Famine2404-0-877cc4021c26
+Message-id: <0de6a730-8329-446c-9198-bc62e1e56be8@me.com>
+Content-Type: multipart/alternative; boundary=Apple-Webmail-42--ed1a75c6-60fa-4284-bcb3-da0e8feac151
+MIME-Version: 1.0
+In-Reply-To: <CAE_FsLmB+4i6PVryHcEORiHnjkot0kGhzYEoZ7X138YLgTRbSQ@mail.gmail.com>
+References: <CAE_FsLmB+4i6PVryHcEORiHnjkot0kGhzYEoZ7X138YLgTRbSQ@mail.gmail.com>
+X-Proofpoint-ORIG-GUID: urBnaqrzCSAHt8zBLq8-4Er52OQ-xRwh
+X-Proofpoint-GUID: urBnaqrzCSAHt8zBLq8-4Er52OQ-xRwh
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.272,Aquarius:18.0.997,Hydra:6.0.619,FMLib:17.11.176.26
+ definitions=2024-01-05_06,2024-01-05_01,2023-05-22_02
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 adultscore=0 mlxscore=0 mlxlogscore=999
+ phishscore=0 spamscore=0 suspectscore=0 bulkscore=0 malwarescore=0
+ clxscore=1030 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=8.19.0-2308100000 definitions=main-2401050111
+
+
+--Apple-Webmail-42--ed1a75c6-60fa-4284-bcb3-da0e8feac151
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+    charset=utf-8;
+    format=flowed
+
+=E4=B8=80=E5=BA=A6google=E3=83=95=E3=82=A9=E3=83=88=E3=81=AB=E5=85=A5=E3=82=
+=8C=E3=81=9F=E3=81=93=E3=81=A8=E3=81=8C=E3=81=82=E3=81=A3=E3=81=9F=E3=81=AE=
+=E3=81=A7=E3=81=99=E3=81=8C=E3=80=81=E4=BB=95=E7=B5=84=E3=81=BF=E3=81=8C=E3=
+=82=8F=E3=81=8B=E3=82=8A=E3=81=BE=E3=81=9B=E3=82=93=E3=81=8Cgoogle=E3=81=A8=
+=E5=90=8C=E6=9C=9F=E3=81=99=E3=82=8B=E3=81=A8=E3=80=81Apple=E3=83=95=E3=82=
+=A9=E3=83=88=E3=81=AB=E3=82=82=E5=BD=B1=E9=9F=BF=E3=81=8C=E3=81=82=E3=82=8A=
+=E3=80=81=E3=82=AA=E3=83=AA=E3=82=B8=E3=83=8A=E3=83=AB=E3=81=8CGoogle=E3=81=
+=AB=E7=A7=BB=E3=81=A3=E3=81=A6=E3=81=97=E3=81=BE=E3=81=84=E3=80=81=E5=AE=B9=
+=E9=87=8F=E3=81=8C=E3=81=84=E3=81=A3=E3=81=B1=E3=81=84=E3=81=AB=E3=81=AA=E3=
+=81=A3=E3=81=9F=E3=82=89=E6=96=99=E9=87=91=E8=AB=8B=E6=B1=82=E3=81=95=E3=82=
+=8C=E3=81=9F=E3=81=AE=E3=81=A7=E3=80=81=E5=85=83=E3=81=AB=E6=88=BB=E3=81=9D=
+=E3=81=86=E3=81=A8=E3=81=97=E3=81=9F=E3=82=89=E3=80=81=E3=83=87=E3=83=BC=E3=
+=82=BF=E3=81=8C=E5=85=83=E9=80=9A=E3=82=8A=E3=81=ABApple=E3=81=AB=E6=88=BB=
+=E3=82=89=E3=81=AA=E3=81=8F=E3=81=AA=E3=81=A3=E3=81=A6=E3=81=97=E3=81=BE=E3=
+=81=84=E3=80=81=E8=89=B2=E3=80=85=E8=AA=BF=E3=81=B9=E3=81=A6=E8=8B=A6=E5=8A=
+=B4=E3=81=97=E3=81=A6=E5=85=83=E3=81=AB=E6=88=BB=E3=81=97=E3=81=9F=E8=A8=98=
+=E6=86=B6=E3=81=8C=E3=81=82=E3=82=8A=E3=81=BE=E3=81=99=E3=80=82=E3=81=9D=E3=
+=82=8C=E4=BB=A5=E6=9D=A5=E3=80=81=E4=BB=96=E3=81=AE=E3=82=AF=E3=83=A9=E3=82=
+=A6=E3=83=89=E3=81=AB=E3=81=AF=E6=89=8B=E3=82=92=E5=87=BA=E3=81=95=E3=81=AA=
+=E3=81=84=E3=82=88=E3=81=86=E3=81=AB=E3=81=97=E3=81=A6=E3=81=84=E3=81=BE=E3=
+=81=99=E3=80=82 =E3=82=84=E3=81=A3=E3=81=B1=E3=82=8A=E3=80=81=E5=A4=A7=E4=BA=
+=8B=E3=81=AA=E3=83=87=E3=83=BC=E3=82=BF=E3=82=92=E4=BF=9D=E7=AE=A1=E3=81=99=
+=E3=82=8B=E3=81=9F=E3=82=81=E3=81=AB=E3=81=AF=E3=81=9D=E3=82=8C=E3=81=AA=E3=
+=82=8A=E3=81=AE=E5=AF=BE=E4=BE=A1=E3=82=92=E6=94=AF=E6=89=95=E3=81=86=E5=BF=
+=85=E8=A6=81=E3=81=8C=E3=81=82=E3=82=8B=E3=82=93=E3=81=A7=E3=81=99=E3=81=AD=
+=E3=80=82 =E4=BB=8A=E3=81=AF=E3=80=81IO=E3=83=87=E3=83=BC=E3=82=BF=E3=81=AE=
+HDD=E3=81=AB=E3=83=90=E3=83=83=E3=82=AF=E3=82=A2=E3=83=83=E3=83=97=E3=81=97=
+=E3=81=A6=E3=81=84=E3=81=BE=E3=81=99=E3=81=8C=E3=80=81IO=E3=83=87=E3=83=BC=
+=E3=82=BF=E3=82=82=E3=82=A2=E3=83=83=E3=83=97=E3=83=AB=E3=81=AE=E3=83=90=E3=
+=83=83=E3=82=AF=E3=82=A2=E3=83=83=E3=83=97=E3=82=A2=E3=83=97=E3=83=AA=E3=81=
+=AE=E3=82=B5=E3=83=9D=E3=83=BC=E3=83=88=E3=82=92=E8=BE=9E=E3=82=81=E3=81=A6=
+=E3=81=97=E3=81=BE=E3=81=A3=E3=81=9F=E3=81=AE=E3=81=A7=E3=81=84=E3=81=A4=E3=
+=81=BE=E3=81=A7=E4=BD=BF=E3=81=88=E3=82=8B=E3=81=8B=E3=82=8F=E3=81=8B=E3=82=
+=8A=E3=81=BE=E3=81=9B=E3=82=93=E3=80=82 =E9=95=B7=E3=81=8F=E3=81=AA=E3=82=8A=
+=E3=81=BE=E3=81=97=E3=81=9F=E3=81=8C=E3=80=81=E3=81=82=E3=82=8A=E3=81=8C=E3=
+=81=A8=E3=81=86=E3=81=94=E3=81=96=E3=81=84=E3=81=BE=E3=81=97=E3=81=9F=E3=80=
+=82=E3=81=BE=E3=81=9F=E8=89=B2=E3=80=85=E6=95=99=E3=81=88=E3=81=A6=E3=81=8F=
+=E3=81=A0=E3=81=95=E3=81=84=E3=80=82 2024=E5=B9=B41=E6=9C=885=E6=97=A5 22:=
+02=E3=80=81=E4=BA=95=E4=B8=8A=E7=9B=B4=E4=B9=9F <inoue405@gmail.com>=E3=81=
+=8B=E3=82=89=E3=81=AE=E3=83=A1=E3=83=BC=E3=83=AB=EF=BC=9A =E5=86=99=E7=9C=9F=
+=E3=81=8C=EF=BC=93=E4=B8=87=E6=9E=9A=E3=82=92=E8=B6=85=E3=81=88=E3=81=A6=E3=
+=81=8D=E3=81=A6iClou=EF=BD=84=E3=81=AE=EF=BC=99=EF=BC=90=E3=83=91=E3=83=BC=
+=E3=82=BB=E3=83=B3=E3=83=88=E3=81=AB=E3=81=AA=E3=81=A3=E3=81=A6=E3=81=84=E3=
+=81=BE=E3=81=99=E3=80=82icloud=E3=81=AE=E9=87=8F=E3=82=92=E7=AF=80=E7=B4=84=
+=E3=81=99=E3=82=8B=E3=81=9F=E3=82=81=E3=81=AB=E5=86=99=E7=9C=9F=E3=83=87=E3=
+=83=BC=E3=82=BF=E3=81=AE=E4=B8=80=E9=83=A8=E3=82=92HDD=E3=82=84PC=E3=81=AB=
+=E4=BF=9D=E5=AD=98=E3=81=97=E3=81=A6=E8=A6=8B=E3=81=9F=E3=81=84=E6=99=82=E3=
+=81=AB=E5=86=99=E7=9C=9F=E3=82=A2=E3=83=97=E3=83=AA=E3=82=92=E4=BD=BF=E3=81=
+=A3=E3=81=A6=E3=81=BF=E3=82=8B=E3=81=93=E3=81=A8=E3=81=AF=E3=81=A7=E3=81=8D=
+=E3=81=BE=E3=81=99=E3=81=8B=EF=BC=9F icloud=E5=86=99=E7=9C=9F=E3=82=92=E4=BD=
+=BF=E3=81=86=E5=A0=B4=E5=90=88=E3=80=81=E3=82=AA=E3=83=AA=E3=82=B8=E3=83=8A=
+=E3=83=AB=E3=81=8Cicloud=E3=81=AE=E5=AE=B9=E9=87=8F=E3=82=92=E8=B6=85=E3=81=
+=88=E3=82=8B=E5=A0=B4=E5=90=88=E3=81=AF=E3=81=8A=E9=87=91=E3=82=92=E6=89=95=
+=E3=81=A3=E3=81=A6=E5=AE=B9=E9=87=8F=E3=82=92=E5=A2=97=E3=82=84=E3=81=99=E3=
+=81=97=E3=81=8B=E3=81=AA=E3=81=84=E3=81=AE=E3=81=A7=E3=81=97=E3=82=87=E3=81=
+=86=E3=81=A7=E3=81=97=E3=82=87=E3=81=86=E3=81=8B=EF=BC=9F =E7=8F=BE=E5=9C=A8=
+=EF=BC=91=EF=BC=90=EF=BC=90G=E3=81=A7=E3=81=99=E3=80=82=E4=BB=8A=E4=BB=A5=E4=
+=B8=8A=E3=81=AB=E6=AF=8E=E6=9C=88=E3=81=AE=E4=BD=BF=E7=94=A8=E9=87=8F=E3=82=
+=92=E6=89=95=E3=81=84=E3=81=9F=E3=81=8F=E3=81=AA=E3=81=84=E3=81=AE=E3=81=A7=
+=E3=81=99=E3=80=82 =E3=82=88=E3=82=8D=E3=81=97=E3=81=8F=E3=81=8A=E9=A1=98=E3=
+=81=84=E3=81=97=E3=81=BE=E3=81=99=E3=80=82
+--Apple-Webmail-42--ed1a75c6-60fa-4284-bcb3-da0e8feac151
+Content-Type: multipart/related;
+    type="text/html";
+    boundary=Apple-Webmail-86--ed1a75c6-60fa-4284-bcb3-da0e8feac151
+
+
+--Apple-Webmail-86--ed1a75c6-60fa-4284-bcb3-da0e8feac151
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+    charset=utf-8;
+
+<html><body><div>=E4=B8=80=E5=BA=A6google=E3=83=95=E3=82=A9=E3=83=88=E3=81=AB=E5=85=A5=
+=E3=82=8C=E3=81=9F=E3=81=93=E3=81=A8=E3=81=8C=E3=81=82=E3=81=A3=E3=81=9F=E3=
+=81=AE=E3=81=A7=E3=81=99=E3=81=8C=E3=80=81=E4=BB=95=E7=B5=84=E3=81=BF=E3=81=
+=8C=E3=82=8F=E3=81=8B=E3=82=8A=E3=81=BE=E3=81=9B=E3=82=93=E3=81=8Cgoogle=E3=
+=81=A8=E5=90=8C=E6=9C=9F=E3=81=99=E3=82=8B=E3=81=A8=E3=80=81Apple=E3=83=95=
+=E3=82=A9=E3=83=88=E3=81=AB=E3=82=82=E5=BD=B1=E9=9F=BF=E3=81=8C=E3=81=82=E3=
+=82=8A=E3=80=81=E3=82=AA=E3=83=AA=E3=82=B8=E3=83=8A=E3=83=AB=E3=81=8CGoogl=
+e=E3=81=AB=E7=A7=BB=E3=81=A3=E3=81=A6=E3=81=97=E3=81=BE=E3=81=84=E3=80=81=E5=
+=AE=B9=E9=87=8F=E3=81=8C=E3=81=84=E3=81=A3=E3=81=B1=E3=81=84=E3=81=AB=E3=81=
+=AA=E3=81=A3=E3=81=9F=E3=82=89=E6=96=99=E9=87=91=E8=AB=8B=E6=B1=82=E3=81=95=
+=E3=82=8C=E3=81=9F=E3=81=AE=E3=81=A7=E3=80=81=E5=85=83=E3=81=AB=E6=88=BB=E3=
+=81=9D=E3=81=86=E3=81=A8=E3=81=97=E3=81=9F=E3=82=89=E3=80=81=E3=83=87=E3=83=
+=BC=E3=82=BF=E3=81=8C=E5=85=83=E9=80=9A=E3=82=8A=E3=81=ABApple=E3=81=AB=E6=
+=88=BB=E3=82=89=E3=81=AA=E3=81=8F=E3=81=AA=E3=81=A3=E3=81=A6=E3=81=97=E3=81=
+=BE=E3=81=84=E3=80=81=E8=89=B2=E3=80=85=E8=AA=BF=E3=81=B9=E3=81=A6=E8=8B=A6=
+=E5=8A=B4=E3=81=97=E3=81=A6=E5=85=83=E3=81=AB=E6=88=BB=E3=81=97=E3=81=9F=E8=
+=A8=98=E6=86=B6=E3=81=8C=E3=81=82=E3=82=8A=E3=81=BE=E3=81=99=E3=80=82=E3=81=
+=9D=E3=82=8C=E4=BB=A5=E6=9D=A5=E3=80=81=E4=BB=96=E3=81=AE=E3=82=AF=E3=83=A9=
+=E3=82=A6=E3=83=89=E3=81=AB=E3=81=AF=E6=89=8B=E3=82=92=E5=87=BA=E3=81=95=E3=
+=81=AA=E3=81=84=E3=82=88=E3=81=86=E3=81=AB=E3=81=97=E3=81=A6=E3=81=84=E3=81=
+=BE=E3=81=99=E3=80=82<br></div><div data-action=3D"content-post-body-conte=
+nt" class=3D"content-post-body-content" data-analytics=3D"content-post:bod=
+y" data-focus=3D"mouse"><p>=E3=82=84=E3=81=A3=E3=81=B1=E3=82=8A=E3=80=81=E5=
+=A4=A7=E4=BA=8B=E3=81=AA=E3=83=87=E3=83=BC=E3=82=BF=E3=82=92=E4=BF=9D=E7=AE=
+=A1=E3=81=99=E3=82=8B=E3=81=9F=E3=82=81=E3=81=AB=E3=81=AF=E3=81=9D=E3=82=8C=
+=E3=81=AA=E3=82=8A=E3=81=AE=E5=AF=BE=E4=BE=A1=E3=82=92=E6=94=AF=E6=89=95=E3=
+=81=86=E5=BF=85=E8=A6=81=E3=81=8C=E3=81=82=E3=82=8B=E3=82=93=E3=81=A7=E3=81=
+=99=E3=81=AD=E3=80=82<br></p><p>=E4=BB=8A=E3=81=AF=E3=80=81IO=E3=83=87=E3=83=
+=BC=E3=82=BF=E3=81=AEHDD=E3=81=AB=E3=83=90=E3=83=83=E3=82=AF=E3=82=A2=E3=83=
+=83=E3=83=97=E3=81=97=E3=81=A6=E3=81=84=E3=81=BE=E3=81=99=E3=81=8C=E3=80=81=
+IO=E3=83=87=E3=83=BC=E3=82=BF=E3=82=82=E3=82=A2=E3=83=83=E3=83=97=E3=83=AB=
+=E3=81=AE=E3=83=90=E3=83=83=E3=82=AF=E3=82=A2=E3=83=83=E3=83=97=E3=82=A2=E3=
+=83=97=E3=83=AA=E3=81=AE=E3=82=B5=E3=83=9D=E3=83=BC=E3=83=88=E3=82=92=E8=BE=
+=9E=E3=82=81=E3=81=A6=E3=81=97=E3=81=BE=E3=81=A3=E3=81=9F=E3=81=AE=E3=81=A7=
+=E3=81=84=E3=81=A4=E3=81=BE=E3=81=A7=E4=BD=BF=E3=81=88=E3=82=8B=E3=81=8B=E3=
+=82=8F=E3=81=8B=E3=82=8A=E3=81=BE=E3=81=9B=E3=82=93=E3=80=82<br></p><p>=E9=
+=95=B7=E3=81=8F=E3=81=AA=E3=82=8A=E3=81=BE=E3=81=97=E3=81=9F=E3=81=8C=E3=80=
+=81=E3=81=82=E3=82=8A=E3=81=8C=E3=81=A8=E3=81=86=E3=81=94=E3=81=96=E3=81=84=
+=E3=81=BE=E3=81=97=E3=81=9F=E3=80=82=E3=81=BE=E3=81=9F=E8=89=B2=E3=80=85=E6=
+=95=99=E3=81=88=E3=81=A6=E3=81=8F=E3=81=A0=E3=81=95=E3=81=84=E3=80=82<br><=
+/p></div><div><div><br></div><blockquote type=3D"cite"><div>2024=E5=B9=B41=
+=E6=9C=885=E6=97=A5 22:02=E3=80=81=E4=BA=95=E4=B8=8A=E7=9B=B4=E4=B9=9F &lt=
+;inoue405@gmail.com&gt;=E3=81=8B=E3=82=89=E3=81=AE=E3=83=A1=E3=83=BC=E3=83=
+=AB=EF=BC=9A<br></div><div><br></div><div><br></div><div><div dir=3D"ltr">=
+<div class=3D"gmail-content-post-body-content"><p>=E5=86=99=E7=9C=9F=E3=81=
+=8C=EF=BC=93=E4=B8=87=E6=9E=9A=E3=82=92=E8=B6=85=E3=81=88=E3=81=A6=E3=81=8D=
+=E3=81=A6iClou=EF=BD=84=E3=81=AE=EF=BC=99=EF=BC=90=E3=83=91=E3=83=BC=E3=82=
+=BB=E3=83=B3=E3=83=88=E3=81=AB=E3=81=AA=E3=81=A3=E3=81=A6=E3=81=84=E3=81=BE=
+=E3=81=99=E3=80=82icloud=E3=81=AE=E9=87=8F=E3=82=92=E7=AF=80=E7=B4=84=E3=81=
+=99=E3=82=8B=E3=81=9F=E3=82=81=E3=81=AB=E5=86=99=E7=9C=9F=E3=83=87=E3=83=BC=
+=E3=82=BF=E3=81=AE=E4=B8=80=E9=83=A8=E3=82=92HDD=E3=82=84PC=E3=81=AB=E4=BF=
+=9D=E5=AD=98=E3=81=97=E3=81=A6=E8=A6=8B=E3=81=9F=E3=81=84=E6=99=82=E3=81=AB=
+=E5=86=99=E7=9C=9F=E3=82=A2=E3=83=97=E3=83=AA=E3=82=92=E4=BD=BF=E3=81=A3=E3=
+=81=A6=E3=81=BF=E3=82=8B=E3=81=93=E3=81=A8=E3=81=AF=E3=81=A7=E3=81=8D=E3=81=
+=BE=E3=81=99=E3=81=8B=EF=BC=9F=E3=80=80icloud=E5=86=99=E7=9C=9F=E3=82=92=E4=
+=BD=BF=E3=81=86=E5=A0=B4=E5=90=88=E3=80=81=E3=82=AA=E3=83=AA=E3=82=B8=E3=83=
+=8A=E3=83=AB=E3=81=8Cicloud=E3=81=AE=E5=AE=B9=E9=87=8F=E3=82=92=E8=B6=85=E3=
+=81=88=E3=82=8B=E5=A0=B4=E5=90=88=E3=81=AF=E3=81=8A=E9=87=91=E3=82=92=E6=89=
+=95=E3=81=A3=E3=81=A6=E5=AE=B9=E9=87=8F=E3=82=92=E5=A2=97=E3=82=84=E3=81=99=
+=E3=81=97=E3=81=8B=E3=81=AA=E3=81=84=E3=81=AE=E3=81=A7=E3=81=97=E3=82=87=E3=
+=81=86=E3=81=A7=E3=81=97=E3=82=87=E3=81=86=E3=81=8B=EF=BC=9F=E3=80=80=E7=8F=
+=BE=E5=9C=A8=EF=BC=91=EF=BC=90=EF=BC=90G=E3=81=A7=E3=81=99=E3=80=82=E4=BB=8A=
+=E4=BB=A5=E4=B8=8A=E3=81=AB=E6=AF=8E=E6=9C=88=E3=81=AE=E4=BD=BF=E7=94=A8=E9=
+=87=8F=E3=82=92=E6=89=95=E3=81=84=E3=81=9F=E3=81=8F=E3=81=AA=E3=81=84=E3=81=
+=AE=E3=81=A7=E3=81=99=E3=80=82<br></p><p>=E3=82=88=E3=82=8D=E3=81=97=E3=81=
+=8F=E3=81=8A=E9=A1=98=E3=81=84=E3=81=97=E3=81=BE=E3=81=99=E3=80=82<br></p>=
+</div></div></div></blockquote></div><div><br></div></body></html>
+--Apple-Webmail-86--ed1a75c6-60fa-4284-bcb3-da0e8feac151--
+
+--Apple-Webmail-42--ed1a75c6-60fa-4284-bcb3-da0e8feac151--
+

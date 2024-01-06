@@ -1,0 +1,9 @@
+Date: Fri, 05 Jan 2024 13:04:25 +0000
+Subject: Re: icloudの容量を節約したい。
+From: Naoya Inoue <ninoue@galapagos-island.net>
+To: 井上直也 <inoue405@gmail.com>
+Message-Id: <0de6a730-8329-446c-9198-bc62e1e56be8@me.com>
+In-Reply-To: <CAE_FsLmB+4i6PVryHcEORiHnjkot0kGhzYEoZ7X138YLgTRbSQ@mail.gmail.com>
+References: <CAE_FsLmB+4i6PVryHcEORiHnjkot0kGhzYEoZ7X138YLgTRbSQ@mail.gmail.com>
+
+一度googleフォトに入れたことがあったのですが、仕組みがわかりませんがgoogleと同期すると、Appleフォトにも影響があり、オリジナルがGoogleに移ってしまい、容量がいっぱいになったら料金請求されたので、元に戻そうとしたら、データが元通りにAppleに戻らなくなってしまい、色々調べて苦労して元に戻した記憶があります。それ以来、他のクラウドには手を出さないようにしています。 やっぱり、大事なデータを保管するためにはそれなりの対価を支払う必要があるんですね。 今は、IOデータのHDDにバックアップしていますが、IOデータもアップルのバックアップアプリのサポートを辞めてしまったのでいつまで使えるかわかりません。 長くなりましたが、ありがとうございました。また色々教えてください。 2024年1月5日 22:02、井上直也 <inoue405@gmail.com>からのメール： 写真が３万枚を超えてきてiClouｄの９０パーセントになっています。icloudの量を節約するために写真データの一部をHDDやPCに保存して見たい時に写真アプリを使ってみることはできますか？ icloud写真を使う場合、オリジナルがicloudの容量を超える場合はお金を払って容量を増やすしかないのでしょうでしょうか？ 現在１００Gです。今以上に毎月の使用量を払いたくないのです。 よろしくお願いします。

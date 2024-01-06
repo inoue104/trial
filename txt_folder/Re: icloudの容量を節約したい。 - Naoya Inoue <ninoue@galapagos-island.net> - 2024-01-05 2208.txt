@@ -1,0 +1,9 @@
+Date: Fri, 05 Jan 2024 13:08:42 +0000
+Subject: Re: icloudの容量を節約したい。
+From: Naoya Inoue <ninoue@galapagos-island.net>
+To: 井上直也 <inoue405@gmail.com>
+Message-Id: <c8a3a235-63bd-4473-8af9-ea21e244ade1@me.com>
+In-Reply-To: <CAE_FsLkLm3U=a5VPY527USNAQ4Ld03cJugbbY5aMcyk_ZjWcaQ@mail.gmail.com>
+References: <CAE_FsLmB+4i6PVryHcEORiHnjkot0kGhzYEoZ7X138YLgTRbSQ@mail.gmail.com> <CAE_FsLkLm3U=a5VPY527USNAQ4Ld03cJugbbY5aMcyk_ZjWcaQ@mail.gmail.com>
+
+なるほど、Icloudの仕組みがよくわからなくですみません。 Apple TVやPCにicloudの容量を超えるオリジナルを保存して使うことはできないんですね。 御指南いただいた方法でやってみます。 ありがとうございました。 Apple 4K TV使用前提ではありませんが、やりたいことは今まで貯めてきた写真を管理して、大きな画面でみんなで楽しみたいのです。 iphoneだけでは出来ない様なので安いミラーリングのコネクターを購入しましたがうまくいきませんでした。 iphoneユーザーで大量の写真を皆さんどのように管理されているのでかなと思いました。 やっぱりicloudで容量追加するのが一番の様ですね。自宅のHDDに保存できるといいなと思いましたが・・・ 2024年1月5日 22:07、井上直也 <inoue405@gmail.com>からのメール： >HDDやPCに保存して見たい時に写真アプリを使ってみることはできますか？ 写真アプリに外部のリソースを参照する機能はないので、自宅のPC（HDD）をネット上に公開しても不可能じゃないですかね。 写真アプリを使いたいなら、一旦PC（HDD）に古い写真を退避して、共有アルバムに見たい写真だけアップすれば良いのでは？ 5000枚が上限ですが、iCloudの容量を圧迫しませんので。 iPhone、iPad、Mac の写真アプリで共有アルバムを使う方法 - Apple サポート (日本) 2024年1月5日(金) 22:02 井上直也 < inoue405@gmail.com >: 写真が３万枚を超えてきてiClouｄの９０パーセントになっています。icloudの量を節約するために写真データの一部をHDDやPCに保存して見たい時に写真アプリを使ってみることはできますか？ icloud写真を使う場合、オリジナルがicloudの容量を超える場合はお金を払って容量を増やすしかないのでしょうでしょうか？ 現在１００Gです。今以上に毎月の使用量を払いたくないのです。 よろしくお願いします。
