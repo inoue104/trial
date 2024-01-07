@@ -10,7 +10,6 @@ def eml_to_txt_batch(eml_folder_path, txt_folder_path):
     :param eml_folder_path: EMLファイルが含まれるフォルダのパス。
     :param txt_folder_path: 生成されたTXTファイルを保存するフォルダのパス。
     """
-
     # フォルダ内の各EMLファイルを処理
     file_list = os.listdir(eml_folder_path)
     print("フォルダ内のファイルは、" + str(len(file_list)) + "個ありました。")
@@ -33,18 +32,27 @@ def eml_to_txt_batch(eml_folder_path, txt_folder_path):
             content += f"References: {msg['References']}\n"
             content += "\n" + msg.get_body(preferencelist=('plain',)).get_content()
     
-            # 内容をテキストファイルに書き込む
-            with open(txt_file_path, "w") as txt_file:
+            # 内容をテキストファイルに書き込む（"a"で追記、"w"で上書き）
+            with open(txt_file_path, "a") as txt_file:
                 txt_file.write(content)
+            print(file_name + " をTXTに変換しました。")
+
+            # TXT変換処理が完了したファイルを移動
+            shutil.move(eml_file_path, converted_eml_folder_path)
+            print(file_name + " を移動しました。")
+
+    print("フォルダ内のファイル" + str(len(file_list)) + "個を変換して移動しました。")
 
     return txt_folder_path
 
+
 eml_folder_path = "./eml_folder"
+converted_eml_folder_path = "./converted_folder"
 txt_folder_path = "./txt_folder"
 
 # emlフォルダが存在しない場合は作成
-if not os.path.exists(txt_folder_path):
-    os.makedirs(txt_folder_path)
+if not os.path.exists(eml_folder_path):
+    os.makedirs(eml_folder_path)
     print("フォルダが存在しなかったので作成しました。")
 
 # txtフォルダが存在しない場合は作成
@@ -52,17 +60,10 @@ if not os.path.exists(txt_folder_path):
     os.makedirs(txt_folder_path)
     print("フォルダが存在しなかったので作成しました。")
 
-# サンプルEMLファイル用のフォルダを作成
-#sample_eml_folder = "/mnt/data/sample_emls"
-#os.makedirs(sample_eml_folder, exist_ok=True)
-
-# サンプルEMLファイルをフォルダにコピー
-#shutil.copy("/mnt/data/sample.eml", os.path.join(sample_eml_folder, "sample1.eml"))
-#shutil.copy("/mnt/data/sample_with_date.eml", os.path.join(sample_eml_folder, "sample2.eml"))
-
-# 変換されたTXTファイル用のフォルダ
-#txt_folder_path = "/mnt/data/converted_txts"
-#os.makedirs(txt_folder_path, exist_ok=True)
+# convertedフォルダが存在しない場合は作成
+if not os.path.exists(converted_eml_folder_path):
+    os.makedirs(converted_eml_folder_path)
+    print("フォルダが存在しなかったので作成しました。")
 
 # フォルダ内の全EMLファイルをTXTファイルに変換
 converted_txt_folder = eml_to_txt_batch(eml_folder_path, txt_folder_path)

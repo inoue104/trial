@@ -1,0 +1,14 @@
+from dotenv import load_dotenv
+load_dotenv()
+
+from langchain import hub
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_community.chat_models import ChatOpenAI
+from langchain_community.document_loaders import WebBaseLoader
+from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_community.vectorstores import Chroma
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.runnables import RunnablePassthrough
+from langchain.vectorstores.elastic_vector_search import ElasticVectorSearch
+
+
